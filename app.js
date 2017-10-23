@@ -58,7 +58,7 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
   var theSum = a + b + c;
   var testMultiply = a * b * c;
   var thirdElement = a + ' and ' + b + ' and ' + c + ' sum to ' + theSum;
-  var fourthElement = a + 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + testMultiply;
+  var fourthElement = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + testMultiply;
   return [theSum, testMultiply, thirdElement, fourthElement];
 }
 
@@ -77,15 +77,23 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
-// TODO: Write your code here
+// TODO: DONE
 var testArray = [2,3,4]; //eslint-disable-line
+var sumTotal = 0;
 
 function sumArray(testArray){ //eslint-disable-line
+  for(var i = 0 ; i < testArray.length ; i++) {
+    sumTotal = sum(sumTotal, testArray[i])[0];
+    console.log(sumTotal);
+  }
 
+  var message = testArray + ' was passed in as an array of numbers, and ' + sumTotal + ' is their sum.';
+  return [sumTotal, message];
 }
 
-// TODO: Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+
+// TODO: DONE
+sumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
