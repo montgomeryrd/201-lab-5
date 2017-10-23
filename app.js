@@ -33,7 +33,7 @@ Test this function by hand in the console to get it working, and when you think 
 //TODO: DONE
 function multiply(a,b){ //eslint-disable-line
   var testMultiply = a * b;
-  var message = 'The product of ' + a + ' and' + b + ' is ' + testMultiply + '.';
+  var message = 'The product of ' + a + ' and ' + b + ' is ' + testMultiply + '.';
   return [testMultiply, message];
 }
 
@@ -108,11 +108,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray){ //eslint-disable-line
+var productTotal = 1;
 
+function multiplyArray(testArray){ //eslint-disable-line
+  for(var j = 0 ; j < testArray.length ; j++) {
+    productTotal = multiply(productTotal, testArray[j])[0];
+    console.log(productTotal);
+  }
+
+  var newMessage = 'The numbers ' + testArray + ' have a product of ' + productTotal + '.';
+  return [productTotal, newMessage];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+multiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
