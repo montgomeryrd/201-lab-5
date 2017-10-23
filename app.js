@@ -58,7 +58,7 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
   var theSum = a + b + c;
   var testMultiply = a * b * c;
   var thirdElement = a + ' and ' + b + ' and ' + c + ' sum to ' + theSum;
-  var fourthElement = a + 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + testMultiply;
+  var fourthElement = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + testMultiply;
   return [theSum, testMultiply, thirdElement, fourthElement];
 }
 
